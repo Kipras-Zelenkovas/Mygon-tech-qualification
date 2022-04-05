@@ -32,7 +32,7 @@ export const Dropdown:FC<{itemsData: string[]}> = ({itemsData}) => {
             <br /><br />
             {dropdown && 
                 <div>
-                    {list.map((x, index) => {
+                    {list.sort().map((x, index) => {
                         return <DropdownItem key={index.toString()} item={x} setState={addToSelected}/>
                     })}
                 </div>
