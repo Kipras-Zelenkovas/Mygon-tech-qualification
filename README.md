@@ -11,7 +11,7 @@ Create dropdown component from scratch using React and Typescript
 - No plain css. Instead, LESS/SASS/JSS/StyledComponents should be used
 
 ## Additional points
-- Dropdown options can be grouped {a-z}
+- Dropdown options can be grouped
 - Callbacks onClose, onOpen and similar added
 - Custom hook for dropdown data validation added
 - Unit tests added

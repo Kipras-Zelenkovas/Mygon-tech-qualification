@@ -1,5 +1,5 @@
 import React, { FC, useRef, useState } from "react"
-import {useOnClickOutside} from "../../utils/useClickOutside"
+import { useClickOutside } from "../../utils/hooks/useClickOutside"
 import { DropdownItem } from "./DropdownItem"
 import { SelectedItem } from "./SelectedItem"
 
@@ -11,7 +11,7 @@ export const Dropdown:FC<{itemsData: string[]}> = ({itemsData}) => {
 
     const containerRef = useRef<HTMLDivElement>(null)
 
-    useOnClickOutside(containerRef, () => setDropdown(false))
+    useClickOutside(containerRef, () => setDropdown(false))
 
     const onSelect = (item: string) => {
         console.log(item)
@@ -20,13 +20,13 @@ export const Dropdown:FC<{itemsData: string[]}> = ({itemsData}) => {
     const addToSelected = (item: string) => {
         setSelected([...selected, item])
         setList(list.filter((a) => a !== item))
-        onSelect("Deleted: " + item)
+        onSelect("Added: " + item)
     }
 
     const deleteFromSelected = (item: string) => {
         setSelected(selected.filter((a) => a !== item))
         setList([...list, item])
-        onSelect("Added: " + item)
+        onSelect("Deleted: " + item)
     }
 
     return (

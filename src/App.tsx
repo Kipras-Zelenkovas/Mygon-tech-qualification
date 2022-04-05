@@ -1,7 +1,7 @@
 import React from "react";
-import { data } from "./components/Dropdown/data";
+import { data } from "./utils/data/data";
 import { Dropdown } from "./components/Dropdown";
-import "./components/Dropdown/styles.scss"
+import "./utils/styles/styles.scss"
 
 const App = () => {
   return (

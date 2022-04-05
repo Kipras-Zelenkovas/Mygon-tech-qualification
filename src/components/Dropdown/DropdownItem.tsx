@@ -1,7 +1,7 @@
 import React, { FC } from "react"
-import { ItemsInterface } from "./ItemsInterface"
+import { itemsInterface } from "../../utils/interface/itemsInterface"
 
-export const DropdownItem:FC<ItemsInterface> = ({item, setState}) => {
+export const DropdownItem:FC<itemsInterface> = ({item, setState}) => {
     return (
         <div onClick={() => setState(item)}>{item}</div>
     )
