@@ -1,3 +1,86 @@
-.selected{
-    display: inline-block;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 60%;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   
+    .dropdown{
+        margin: 1rem;
+        position: relative;
+        display: inline-block;
+        z-index: 10;
+        
+        .controll-button{
+            padding: .5rem 1.5rem;
+            border: 0;
+            outline: 0;
+            border-radius: 5px;
+            box-shadow: 0 0 2px rgba(24, 24, 24, 0.195);
+            background-color: rgb(7, 235, 235);
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+    
+        }
+        .dropdown-list{
+            animation: dropdownAnimation .06s ease-in-out forwards;
+            transform-origin: top;
+            position: absolute;
+            box-shadow: 0 0 10px rgba(112, 112, 112, 0.395);
+            border-radius: 5px;
+            width: 8rem;
+            overflow: hidden;
+            background-color: white;
+            
+
+            div{
+                padding: 0.4rem;
+                text-align: center;
+                cursor: pointer;
+                color: rgb(59, 59, 59);
+                transition: background-color linear .06s;
+
+                &:hover{
+                    background-color: rgba(128, 128, 128, 0.258);
+                }
+            }
+        }
+
+    }
+    .list{
+         display: flex;
+         gap: 0.5rem;
+
+        button{
+            outline: 0;
+            border: 0;
+            padding: 0.2rem;
+            border-radius: 50px;
+            color: rgb(59, 59, 59);
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(128, 128, 128, 0.258);
+
+        }
+    }
+}
+
+@keyframes dropdownAnimation{
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
